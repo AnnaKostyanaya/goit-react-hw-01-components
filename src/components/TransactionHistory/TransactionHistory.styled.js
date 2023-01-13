@@ -4,7 +4,7 @@ export const TransactionTable = styled.table`
   margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
-  width: 85vw;
+  width: 65vw;
   border: 1px solid #8080807a;
 `;
 
@@ -20,7 +20,7 @@ export const TableHead = styled.thead`
 
 export const TableLine = styled.tr`
   height: 35px;
-  font-size: 18px;
+  font-size: 16px;
   color: grey;
   text-align: center;
   border: 1px solid #8080807a;
