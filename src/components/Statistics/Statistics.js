@@ -8,11 +8,11 @@ import {
   Percentage,
 } from './Statistics.styled';
 
-const StatElement = ({ stats }) => {
+const StatElement = ({ stats: { label, percentage } }) => {
   return (
     <StatItem>
-      <Label>{stats.label}</Label>
-      <Percentage>{`${stats.percentage}%`}</Percentage>
+      <Label>{label}</Label>
+      <Percentage>{`${percentage}%`}</Percentage>
     </StatItem>
   );
 };
