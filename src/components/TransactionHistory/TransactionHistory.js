@@ -7,16 +7,6 @@ import {
   TableTd,
 } from './TransactionHistory.styled';
 
-const ItemElement = ({ items: { type, amount, currency } }) => {
-  return (
-    <TableLine>
-      <TableTd>{type}</TableTd>
-      <TableTd>{amount}</TableTd>
-      <TableTd>{currency}</TableTd>
-    </TableLine>
-  );
-};
-
 export const TransactionHistory = ({ items }) => {
   return (
     <TransactionTable>
@@ -30,7 +20,11 @@ export const TransactionHistory = ({ items }) => {
 
       <TableBody>
         {items.map(element => (
-          <ItemElement key={element.id} items={element} />
+          <TableLine key={element.id}>
+            <TableTd>{element.type}</TableTd>
+            <TableTd>{element.amount}</TableTd>
+            <TableTd>{element.currency}</TableTd>
+          </TableLine>
         ))}
       </TableBody>
     </TransactionTable>
@@ -48,11 +42,21 @@ TransactionHistory.propTypes = {
   ),
 };
 
-ItemElement.propTypes = {
-  items: PropTypes.exact({
-    id: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired,
-    amount: PropTypes.string.isRequired,
-    currency: PropTypes.string.isRequired,
-  }),
-};
+// const ItemElement = ({ items: { type, amount, currency } }) => {
+//   return (
+//     <TableLine>
+//       <TableTd>{type}</TableTd>
+//       <TableTd>{amount}</TableTd>
+//       <TableTd>{currency}</TableTd>
+//     </TableLine>
+//   );
+// };
+
+// ItemElement.propTypes = {
+//   items: PropTypes.exact({
+//     id: PropTypes.string.isRequired,
+//     type: PropTypes.string.isRequired,
+//     amount: PropTypes.string.isRequired,
+//     currency: PropTypes.string.isRequired,
+//   }),
+// };

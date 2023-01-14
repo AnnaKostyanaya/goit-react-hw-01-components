@@ -7,14 +7,7 @@ export const Online = styled.span`
   height: 6px;
   border-radius: 50%;
   background-color: ${({ status, theme }) => {
-    switch (status) {
-      case true:
-        return theme.colors.green;
-      case false:
-        return theme.colors.red;
-      default:
-        return theme.colors.grey;
-    }
+    return status === true ? theme.colors.green : theme.colors.red;
   }};
 `;
 

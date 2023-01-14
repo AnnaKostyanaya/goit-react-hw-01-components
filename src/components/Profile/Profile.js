@@ -12,14 +12,12 @@ import {
   Chapter,
 } from './Profile.styled';
 
-export const User = ({
-  users: {
-    username,
-    avatar,
-    tag,
-    location,
-    stats: { followers, views, likes },
-  },
+export const Profile = ({
+  username,
+  avatar,
+  tag,
+  location,
+  stats: { followers, views, likes },
 }) => {
   return (
     <>
@@ -50,17 +48,13 @@ export const User = ({
   );
 };
 
-User.propTypes = {
-  user: PropTypes.arrayOf(
-    PropTypes.exact({
-      username: PropTypes.string.isRequired,
-      tag: PropTypes.string.isRequired,
-      location: PropTypes.string.isRequired,
-      stats: PropTypes.exact({
-        followers: PropTypes.number.isRequired,
-        views: PropTypes.number.isRequired,
-        likes: PropTypes.number.isRequired,
-      }),
-    })
-  ),
+Profile.propTypes = {
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  stats: PropTypes.exact({
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+  }),
 };
