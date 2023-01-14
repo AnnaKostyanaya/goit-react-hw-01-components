@@ -20,7 +20,7 @@ export const Online = styled.span`
 
 export const FriendItem = styled.li`
   display: flex;
-  margin: 0.5vw 30vw;
+  margin: 5px;
   padding-left: 20px;
   width: 370px;
   height: 70px;
