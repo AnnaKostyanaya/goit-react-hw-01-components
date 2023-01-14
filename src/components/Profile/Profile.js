@@ -12,7 +12,15 @@ import {
   Chapter,
 } from './Profile.styled';
 
-export const User = ({ users: { username, avatar, tag, location, stats } }) => {
+export const User = ({
+  users: {
+    username,
+    avatar,
+    tag,
+    location,
+    stats: { followers, views, likes },
+  },
+}) => {
   return (
     <>
       <CardWrapper>
@@ -26,15 +34,15 @@ export const User = ({ users: { username, avatar, tag, location, stats } }) => {
         <StatInfo>
           <Chapter>
             <Label>Followers </Label>
-            <Quantity>{stats.followers}</Quantity>
+            <Quantity>{followers}</Quantity>
           </Chapter>
           <Chapter>
             <Label>Views </Label>
-            <Quantity>{stats.views}</Quantity>
+            <Quantity>{views}</Quantity>
           </Chapter>
           <Chapter>
             <Label>Likes </Label>
-            <Quantity>{stats.likes}</Quantity>
+            <Quantity>{likes}</Quantity>
           </Chapter>
         </StatInfo>
       </CardWrapper>

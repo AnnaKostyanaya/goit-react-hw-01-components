@@ -7,7 +7,7 @@ import {
   TableTd,
 } from './TransactionHistory.styled';
 
-const ItemElement = ({ items: { id, type, amount, currency } }) => {
+const ItemElement = ({ items: { type, amount, currency } }) => {
   return (
     <TableLine>
       <TableTd>{type}</TableTd>
