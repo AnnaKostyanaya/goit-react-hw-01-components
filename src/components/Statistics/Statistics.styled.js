@@ -6,7 +6,7 @@ export const SectionStatistics = styled.section`
   width: 500px;
   height: 200px;
   border-radius: 4px;
-  border: 1px solid #8080807a;
+  border: ${props => `1px solid ${props.theme.colors.boxGrey}`};
   margin-left: auto;
   margin-right: auto;
 `;
@@ -17,7 +17,7 @@ export const TitleName = styled.h2`
   padding-top: 35px;
   font-size: 24px;
   font-weight: 600;
-  color: #5a5555;
+  color: ${props => props.theme.colors.grey};
   text-align: center;
   text-transform: uppercase;
 `;
@@ -41,12 +41,12 @@ export const StatItem = styled.li`
 export const Label = styled.span`
   display: block;
   font-size: 18px;
-  color: white;
+  color: ${props => props.theme.colors.white};
 `;
 
 export const Percentage = styled.span`
   display: block;
   font-size: 24px;
   font-weight: 600;
-  color: white;
+  color: ${props => props.theme.colors.white};
 `;

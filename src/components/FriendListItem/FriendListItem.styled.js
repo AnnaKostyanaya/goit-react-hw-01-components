@@ -6,14 +6,14 @@ export const Online = styled.span`
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background-color: ${({ status }) => {
+  background-color: ${({ status, theme }) => {
     switch (status) {
       case true:
-        return '#4caf50';
+        return theme.colors.green;
       case false:
-        return '#f44336';
+        return theme.colors.red;
       default:
-        return '#010101';
+        return theme.colors.grey;
     }
   }};
 `;
@@ -25,8 +25,8 @@ export const FriendItem = styled.li`
   width: 370px;
   height: 70px;
 
-  border: 1px solid #8080807a;
-  box-shadow: 2px 2px 2px #8080807a;
+  border: ${props => `1px solid ${props.theme.colors.boxGrey}`};
+  box-shadow: ${props => `2px 2px 2px ${props.theme.colors.boxGrey}`};
 
   align-items: center;
   justify-content: flex-start;
@@ -39,7 +39,7 @@ export const Avatar = styled.img`
 `;
 
 export const Name = styled.p`
-  color: #010101;
+  color: ${props => props.theme.colors.black};
   font-family: serif;
   font-size: 26px;
 `;

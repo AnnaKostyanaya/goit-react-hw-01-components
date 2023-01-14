@@ -5,7 +5,7 @@ export const TransactionTable = styled.table`
   margin-left: auto;
   margin-right: auto;
   width: 65vw;
-  border: 1px solid #8080807a;
+  border: ${props => `1px solid ${props.theme.colors.boxGrey}`};
 `;
 
 export const TableHead = styled.thead`
@@ -15,7 +15,7 @@ export const TableHead = styled.thead`
   text-align: center;
   text-transform: uppercase;
   background-color: #89bde0;
-  border: 1px solid #8080807a;
+  border: ${props => `1px solid ${props.theme.colors.boxGrey}`};
 `;
 
 export const TableLine = styled.tr`
@@ -23,13 +23,13 @@ export const TableLine = styled.tr`
   font-size: 16px;
   color: grey;
   text-align: center;
-  border: 1px solid #8080807a;
+  border: ${props => `1px solid ${props.theme.colors.boxGrey}`};
 `;
 
 export const TableBody = styled.tbody`
-  border: 1px solid #8080807a;
+  border: ${props => `1px solid ${props.theme.colors.boxGrey}`};
 `;
 
 export const TableTd = styled.td`
-  border: 1px solid #8080807a;
+  border: ${props => `1px solid ${props.theme.colors.boxGrey}`};
 `;

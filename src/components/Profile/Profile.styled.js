@@ -7,8 +7,8 @@ export const CardWrapper = styled.div`
   padding: 24px;
   width: 350px;
   height: 400px;
-  background-color: white;
-  box-shadow: 2px 2px 2px #8080807a;
+  background-color: ${props => props.theme.colors.white};
+  box-shadow: ${props => `2px 2px 2px ${props.theme.colors.boxGrey}`};
 `;
 
 export const InfoContainer = styled.div`
@@ -27,7 +27,7 @@ export const StatInfo = styled.ul`
   list-style: none;
   font-family: serif;
   text-align: center;
-  background-color: #80808014;
+  background-color: ${props => props.theme.colors.bcgGrey};
 `;
 
 export const Chapter = styled.li`
@@ -37,27 +37,27 @@ export const Chapter = styled.li`
 export const Label = styled.span`
   display: block;
   font-size: 18px;
-  color: grey;
+  color: ${props => props.theme.colors.grey};
 `;
 
 export const Quantity = styled.span`
   display: block;
   font-size: 24px;
   font-weight: 600;
-  color: #010101;
+  color: ${props => props.theme.colors.black};
 `;
 
 export const Avatar = styled.img`
   width: 200px;
   border-radius: 50%;
   border-style: solid;
-  border-color: #010101;
+  border-color: ${props => props.theme.colors.grey};
   margin-left: auto;
   margin-right: auto;
 `;
 
 export const UserName = styled.p`
-  color: #010101;
+  color: ${props => props.theme.colors.black};
   font-family: serif;
   font-size: 30px;
   text-align: center;
@@ -65,14 +65,14 @@ export const UserName = styled.p`
 `;
 
 export const Tag = styled.p`
-  color: grey;
+  color: ${props => props.theme.colors.grey};
   font-family: serif;
   font-size: 24px;
   text-align: center;
 `;
 
 export const Location = styled.p`
-  color: grey;
+  color: ${props => props.theme.colors.grey};
   font-family: serif;
   font-size: 24px;
   text-align: center;
